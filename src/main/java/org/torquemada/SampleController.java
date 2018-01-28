@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class SampleController {
 
     @RequestMapping("/")
+    String root() {
+        return "home";
+    }
+
+    @RequestMapping("/home")
     String home() {
         return "home";
     }
