@@ -1,4 +1,4 @@
-package org.torquemada;
+package org.torquemada.domain;
 
 public class Greeting {
 

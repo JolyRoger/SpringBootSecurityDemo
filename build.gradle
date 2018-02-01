@@ -34,8 +34,15 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-starter-security")
-    compile("org.springframework.boot:spring-boot-devtools")
-    testCompile("junit:junit")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+//    compile("org.springframework.boot:spring-boot-devtools")
+//    compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.2.Final'
+
+    compile("com.h2database:h2")
+    compile group: 'com.google.guava', name: 'guava', version: '23.6-jre'
+    compileOnly("org.projectlombok:lombok")
+
+//    testCompile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.2.Final'
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile("org.springframework.security:spring-security-test")
+    testCompile("org.springframework.boot:spring-boot-starter-data-jpa")
 }
