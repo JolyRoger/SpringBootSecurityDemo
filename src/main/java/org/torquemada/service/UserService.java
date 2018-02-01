@@ -15,7 +15,7 @@ public class UserService implements UserDetailsService {
         return User.withDefaultPasswordEncoder().
                username("user").
                password("password").
-               roles(String.valueOf(Role.USER)).
+               roles("USER").
                accountExpired(false).
                accountLocked(false).
                credentialsExpired(false).
