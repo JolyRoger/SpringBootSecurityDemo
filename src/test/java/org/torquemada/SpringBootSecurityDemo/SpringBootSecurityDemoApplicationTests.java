@@ -28,32 +28,6 @@ public class SpringBootSecurityDemoApplicationTests {
     @Autowired
     private UserRepository userRepository;
 
-    @Before
-    @Rollback(false)
-    public void setup() {
-        System.out.println("SETUP!!!");
-        Role role1 = new Role("USER");
-        Role role2 = new Role("ADMIN");
-
-        User user1 = User.builder().username("user").
-             password("password").
-             authorities(ImmutableSet.of(role1, role2)).
-             accountNonExpired(true).
-             accountNonLocked(true).
-             credentialsNonExpired(true).
-             enabled(true).build();
-
-        User user2 = User.builder().username("vasya").
-             password("password").
-             authorities(ImmutableSet.of(role2)).
-             accountNonExpired(true).
-             accountNonLocked(true).
-             credentialsNonExpired(true).
-             enabled(true).build();
-
-        userRepository.saveAll(ImmutableList.of(user1, user2));
-    }
-
 	@Test
 	public void myTest() {
         assertTrue(true);
