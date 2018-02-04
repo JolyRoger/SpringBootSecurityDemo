@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Data
@@ -18,8 +18,8 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @OneToMany(fetch= FetchType.EAGER, cascade=CascadeType.ALL, mappedBy = "user")
-    private Set<Role> authorities;
+    @ManyToMany(fetch= FetchType.LAZY, cascade=CascadeType.ALL, mappedBy = "user")
+    private List<Role> authorities;
     private String username;
     private String password;
     private boolean accountNonExpired;

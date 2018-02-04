@@ -35,10 +35,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-security")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("org.springframework.boot:spring-boot-devtools")
-    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.1'
-
-    compile("com.h2database:h2")
-    compile group: 'com.google.guava', name: 'guava', version: '23.6-jre'
+    compile("org.postgresql:postgresql")
+    compile("com.google.guava:guava:23.6-jre")
     compileOnly("org.projectlombok:lombok")
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
