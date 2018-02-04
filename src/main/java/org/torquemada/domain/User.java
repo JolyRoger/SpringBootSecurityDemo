@@ -18,7 +18,7 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @OneToMany(fetch= FetchType.EAGER, cascade=CascadeType.ALL , mappedBy = "user")
+    @OneToMany(fetch= FetchType.EAGER, cascade=CascadeType.ALL, mappedBy = "user")
     private Set<Role> authorities;
     private String username;
     private String password;

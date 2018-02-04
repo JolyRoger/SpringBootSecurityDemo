@@ -3,8 +3,6 @@ package org.torquemada.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CollectionId;
-import org.hibernate.annotations.Type;
 import org.springframework.security.core.GrantedAuthority;
 import javax.persistence.*;
 import java.util.Set;

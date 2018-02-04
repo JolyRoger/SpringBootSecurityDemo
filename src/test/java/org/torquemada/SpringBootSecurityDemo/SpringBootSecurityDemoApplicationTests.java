@@ -3,10 +3,12 @@ package org.torquemada.SpringBootSecurityDemo;
 import static org.junit.Assert.*;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+import org.hibernate.annotations.common.util.impl.Log;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
@@ -20,6 +22,7 @@ import org.torquemada.service.UserRepository;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {SpringBootSecurityDemoApplication.class, WebSecurityConfig.class})
 @DataJpaTest
+@AutoConfigureTestDatabase(replace= AutoConfigureTestDatabase.Replace.NONE)
 public class SpringBootSecurityDemoApplicationTests {
 
     @Autowired
