@@ -18,7 +18,7 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @ManyToMany(fetch= FetchType.LAZY, cascade=CascadeType.ALL, mappedBy = "user")
+    @ManyToMany(fetch= FetchType.EAGER, cascade=CascadeType.ALL, mappedBy = "user")
     private List<Role> authorities;
     private String username;
     private String password;
