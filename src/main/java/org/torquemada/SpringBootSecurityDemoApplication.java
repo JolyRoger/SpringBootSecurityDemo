@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.torquemada.service.UserService;
 
 @SpringBootApplication
-@EnableJpaRepositories
 public class SpringBootSecurityDemoApplication {
 
 	public static void main(String[] args) {
